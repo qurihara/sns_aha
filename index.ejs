@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Universal Background Filter</title>
+</head>
+<h4>The Unievrsal Background Filter for SNS Profile Picture</h4>
+<form action="/upload" enctype="multipart/form-data" method="post">
+<p>1. Select your SNS profile picture.</p>
+<input type="file" name="upload" multiple="multiple"><br>
+<p>2. (Optional) Type your email address if you want the result sent to you from <%- email %>.</p>
+<input type="email" name="email" size="30" maxlength="40"><br>
+<p>3. Press the button below and wait for a while (say, 1 minute or so). You may recieve an email even if the browser gets timeout.</p>
+
+<pre><code class='language-javascript'><div id="honeypot-div" style="display:none">
+If you see this, leave this form field blank
+and invest in CSS support.
+<input type="text" name="honeypot" value="" />
+</div></code></pre>
+
+<input type="submit" value="Process">
+</form>
+<p>Example:</p><table border="0"><tr>
+<td align="center"><img src="example/icon.jpg" width = "64" height = "64"></td>
+<td align="center">+</td>
+<td align="center"><img src="example/movie.gif" width = "64" height = "64"></td>
+<td align="center">=</td>
+<td align="center"><img src="example/resize_movie_icon.gif" width = "64" height = "64"></td>
+</tr></table>
+<p>(c)Kazutaka Kurihara</p>
+
+<body>
+</body>
+</html>
