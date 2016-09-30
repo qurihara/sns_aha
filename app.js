@@ -57,7 +57,7 @@ server = http.createServer(function(req, res) {
 
         if (
             (fields.length == 0) ||
-            (files.length != 1) ||
+            (files.length != 2) ||
             (fields[1][0] == 'honeypot' && fields[1][1] != '') ||
             (files[0][1]['type'].lastIndexOf('image', 0) != 0) ||
             (files[0][1]['size'] == 0)
@@ -65,7 +65,7 @@ server = http.createServer(function(req, res) {
           res.writeHead(503);
           res.write("error.");
           res.end();
-          for (var j=0;i<files.length;j++){
+          for (var j=0;j<files.length;j++){
             fs.unlinkSync(files[j][1]['path']);
           }
           return;
@@ -74,9 +74,10 @@ server = http.createServer(function(req, res) {
         var filestr = '';
         // for(var i =0;i<files.length;i++){
           var pat = files[0][1]['path'];
+          var pat2 = files[1][1]['path'];
           var dir = now.toString();
 
-          var child = exec(settings.exepath + " " + pat + " " + now + " 400x400", function(err, stdout, stderr) {
+          var child = exec(settings.exepath + " " + pat + " " + pat2 + " " + now + " 400x400", function(err, stdout, stderr) {
             if (!err) {
               //console.log('stdout: ' + stdout);
               //console.log('stderr: ' + stderr);

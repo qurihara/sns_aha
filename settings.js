@@ -1,4 +1,4 @@
-exports.port = '3000';
+exports.port = '3001';
 exports.exepath = './make.sh';
 exports.viewer_tempate = './viewer_nogif.ejs';
 exports.sender = 'x@x';
