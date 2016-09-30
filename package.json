@@ -1,5 +1,5 @@
 {
-  "name": "TheUniversalBackgroundFilter",
+  "name": "sns_aha",
   "version": "1.0.0",
   "description": "For your SNS profile picture.",
   "main": "app.js",
@@ -17,5 +17,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kazutaka Kurihara",
-  "license": "ISC"
+  "license": "MIT"
 }
